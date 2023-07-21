@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>创建springboot报错</title>
+      <link href="/2023/07/20/%E5%88%9B%E5%BB%BAspringboot%E6%8A%A5%E9%94%99/"/>
+      <url>/2023/07/20/%E5%88%9B%E5%BB%BAspringboot%E6%8A%A5%E9%94%99/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-创建springboot报错"><a href="#1-创建springboot报错" class="headerlink" title="1.创建springboot报错"></a>1.创建springboot报错</h2><p><img src="/assets/image-20220327162821487.png" alt="image-20220327162821487"></p><h3 id="处理方法"><a href="#处理方法" class="headerlink" title="处理方法"></a>处理方法</h3><p><img src="/assets/image-20220327162947429.png" alt="image-20220327162947429"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>处理req中文乱码问题</title>
+      <link href="/2023/07/20/%E5%A4%84%E7%90%86req%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"/>
+      <url>/2023/07/20/%E5%A4%84%E7%90%86req%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-处理req中文乱码问题"><a href="#1-处理req中文乱码问题" class="headerlink" title="1.处理req中文乱码问题"></a>1.处理req中文乱码问题</h3><p>1.先编码，转为字节数组。tomcat进行URL解码，默认字符集ISO_8859_1.</p><p>2.将字节数组转为字符串。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">username  = <span class="keyword">new</span> <span class="title class_">String</span>(username.getBytes(StandardCharsets.ISO_8859_1),StandardCharsets.UTF_8);</span><br><span class="line"><span class="comment">//* GET请求参数乱码解决方案同时也可也把POST请求参数乱码的问题也解决了</span></span><br><span class="line">* 只不过对于POST请求参数一般都会比较多，采用这种方式解决乱码起来比较麻烦，所以对于POST请求还是建议使用设置编码的方式进行。</span><br></pre></td></tr></table></figure><p>3.Tomcat8.0之后，已将GET请求乱码问题解决，设置默认的解码方式为UTF-8，但目前tomcat依赖只支持到7，所以需用本地的尝试。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>海贼王路飞</title>
       <link href="/2023/05/19/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
       <url>/2023/05/19/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
